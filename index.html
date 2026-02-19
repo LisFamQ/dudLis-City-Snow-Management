@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dudLis City: Snow Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>dudLis City: Snow Management</h1>
+        <p>Управляй зимней коммунальной системой города в реальном времени</p>
+      </div>
+      <div class="stats" id="topStats"></div>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <h2>Управление службами</h2>
+        <div class="buttons">
+          <button id="buyTruckBtn">Купить снегоуборщик (₽120)</button>
+          <button id="upgradeDepotBtn">Расширить депо (₽220)</button>
+          <button id="boostHeatingBtn">Экстренное отопление (₽90)</button>
+          <button id="saltBtn">Обработка реагентом (₽60)</button>
+        </div>
+
+        <div class="policy">
+          <label for="priorityRange">Приоритет уборки магистралей</label>
+          <input id="priorityRange" type="range" min="0" max="100" value="60" />
+          <span id="priorityValue">60%</span>
+        </div>
+
+        <div class="weather">
+          <h3>Погода</h3>
+          <p id="weatherText"></p>
+          <button id="forceStormBtn" class="danger">Запустить метель (тест)</button>
+        </div>
+      </section>
+
+      <section class="panel city-panel">
+        <h2>Карта районов</h2>
+        <div id="cityGrid" class="city-grid"></div>
+      </section>
+
+      <section class="panel side">
+        <h2>Жалобы и события</h2>
+        <ul id="events" class="events"></ul>
+
+        <h2>Рейтинг региона</h2>
+        <ol id="leaderboard" class="leaderboard"></ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Цель: удержать удовлетворённость выше 60% и не допустить коллапса бюджета.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
